@@ -55,7 +55,7 @@ import Msiurbanraider from '../mahsulotlar/msiurbanraider';
 import Msicrosshair15 from '../mahsulotlar/msicrosshair15';
 import Gatewayl31 from '../mahsulotlar/gatewayl31';
 import Rogdelta from '../mahsulotlar/rogdelta';
-import Savat from '../pages/savat'
+import Savat from '../pages/savat';
 export default function routes() {
   return (
     <BrowserRouter>

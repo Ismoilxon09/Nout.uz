@@ -6,6 +6,55 @@ import '../css/firstpage.css';
 import '../css/mahsulot.css';
 import '../css/savat.css';
 
+function savat2(){
+  var savatdiv = document.getElementById('savatdiv')
+  var div = document.createElement('div')
+  var img = document.createElement('img')
+  var h4 = document.createElement('h4')
+  var spannarx = document.createElement('span')
+  var btndalete2 = document.createElement('button')
+  var i = document.createElement('i')
+
+  i.classList = "fa-solid fa-x";
+  div.classList = "shadow-lg p-3 mb-5 bg-body-tertiary rounded";
+
+  btndalete2.addEventListener('click', function daleteDiv(){
+      savatdiv.removeChild(div)
+  })
+
+
+  div.style.width = "100%";
+  div.style.height = "15vh";
+  div.style.display = "flex";
+  div.style.alignItems = "center";
+  div.style.justifyContent = "space-around";
+
+  h4.style.color = "blue";
+
+  spannarx.style.color = "gray";
+
+  img.style.width = "7%";
+
+  btndalete2.style.width = "5%";
+  btndalete2.style.height = "5vh";
+  btndalete2.style.border = "none";
+  btndalete2.style.background = "none";
+
+  img.src = "https://nout.uz/wp-content/uploads/2023/02/84-300x300.png";
+  h4.innerText = window.localStorage.getItem("ism");
+  spannarx.innerText = window.localStorage.getItem("narx");
+
+  btndalete2.value = i;
+
+  savatdiv.appendChild(div)
+  div.appendChild(img)
+  div.appendChild(h4)
+  div.appendChild(spannarx)
+  div.appendChild(btndalete2)
+  btndalete2.appendChild(i)
+ 
+}
+
 
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
@@ -14,7 +63,7 @@ const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]
 const popoverList = [...popoverTriggerList].map(popoverTriggerEl => new bootstrap.Popover(popoverTriggerEl))
 const Savat = () => {
     return (
-        <div>
+        <div onLoad={savat2}>
             <header>
                    <div className='header-div'>
                       <div className='header-div1'>
@@ -333,7 +382,7 @@ const Savat = () => {
                      <div className="savat1">
                         <h1>Savat</h1>
                      </div>
-                     <div id='savat2' className="savat2">
+                     <div id='savatdiv' className="savat2">
                         
                      </div>
                    </div>

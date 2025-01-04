@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import '../css/firstpage.css';
 import '../css/mahsulot.css';
 
-function nextrasm() {
+function nextrasm() { 
    var imgrasm = document.getElementById('imgrasm')
    imgrasm.setAttribute('src', 'https://nout.uz/wp-content/uploads/2023/02/80-1536x1154.png')
    imgrasm.style.width = "100%";

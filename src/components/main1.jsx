@@ -7,30 +7,108 @@ function savatqush() {
   var  spanqush = document.getElementById('spanqush');
   var  spanqush1 = document.getElementById('spanqush1');
   var span = document.getElementById('span');
-  var span_narx = document.getElementById('span_narx')
   var modal = document.getElementById('modal')
 
+  var div = document.createElement('div')
+  var divrasm = document.createElement('div')
+  var divtext = document.createElement('div')
+  var divism = document.createElement('div')
+  var divnarx = document.createElement('div')
+  var btndalete = document.createElement('button')
+  var i = document.createElement('i')
   var span2 = document.createElement('span')
   var img = document.createElement('img')
+  var span10 = document.createElement('span')
 
-  img.style.width = "20%";
+  btndalete.addEventListener('click', function daleteDiv(){
+      modal1.removeChild(div)
+  })
+
+ i.classList = "fa-solid fa-x"
+
+  div.style.width = "100%";
+  div.style.height = "15vh";
+  div.style.display = "inline-flex"
+  
+
+  divtext.style.width = "60%";
+  divtext.style.height = "15vh";
+  divtext.style. display = "flex";
+  divtext.style.flexDirection = "column";
+
+  divrasm.style.width = "20%";
+  divrasm.style.height = "15vh";
+  divrasm.style.display = "inline-flex";
+  divrasm.style.justifyContent = "center";
+  divrasm.style.alignItems = "center";
+
+  divism.style.width = "100%";
+  divism.style.height = "5vh";
+  divism.style.display = "inline-flex";
+  divism.style.alignItems = "center";
+  divism.style.marginTop = "20px";
+
+  divnarx.style.width = "100%";
+  divnarx.style.height = "5vh";
+  divnarx.style.display = "inline-flex";
+  divnarx.style.alignItems = "center";
+
+  btndalete.style.width = "10%";
+  btndalete.style.height = "5vh";
+  btndalete.style.border = "none";
+  btndalete.style.marginTop = "5vh";
+  btndalete.style.background = "none";
+
+  
+
+  i.style.color = "black"
+  i.style.fontSize = "11pt"
+  i.style.marginTop = "-2vh"
+
+  img.style.width = "100%";
   img.style.height = "15vh";
 
   span.style.marginLeft = "20px"
+  span.style.marginBottom = "40px"
 
+  span10.style.fontSize = "10pt"
+  span10.style.marginLeft = "20px"
+  span10.style.color = "gray"
+
+  btndalete.value = i;
+  
   img.setAttribute('src', 'https://nout.uz/wp-content/uploads/2023/02/84-300x300.png')
 
-  span.value = span2.innerText;
+  span2.innerText = window.localStorage.getItem("ism");
   spanqush.innerText = spanqush.innerText * 1 + 1;
   spanqush1.innerText = spanqush1.innerText * 1 + 1;
-  
-  window.localStorage.setItem("HP Pavilion 15 Gold (R3-5300U)", "4 845 000");
- 
-  modal.appendChild(img)
-  modal.appendChild(span)
+  span10.innerText = window.localStorage.getItem("narx");
+  window.localStorage.setItem("ism", "HP Pavilion 15 Gold (R3-5300U)");
+  window.localStorage.setItem("narx", "4 845 000");
 
+  modal.appendChild(div)
+  div.appendChild(divrasm)
+  div.appendChild(divtext)
+  div.appendChild(btndalete)
+  btndalete.appendChild(i)
+  divtext.appendChild(divism)
+  divtext.appendChild(divnarx)
+  divrasm.appendChild(img)
+  divism.appendChild(span)
+  divnarx.appendChild(span10)
 
+  modal1.appendChild(div)
+  div.appendChild(divrasm)
+  div.appendChild(divtext)
+  div.appendChild(btndalete)
+  btndalete.appendChild(i)
+  divtext.appendChild(divism)
+  divtext.appendChild(divnarx)
+  divrasm.appendChild(img)
+  divism.appendChild(span)
+  divnarx.appendChild(span10)
 }
+
 
 
 export default function main1(props) {
@@ -626,7 +704,7 @@ export default function main1(props) {
 
 
 
-                </main>
+            </main>
                 <Outlet/>
         </div>
     );

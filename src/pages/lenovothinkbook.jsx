@@ -403,7 +403,7 @@ const Lenovothinkpad = () => {
              </main>
              <footer> 
                     <div className='footer_div'>
-                    <div class="dropdown1">
+                    <div className="dropdown1">
                          <button id='footer-btn' class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                            Brendlar
                          </button>
@@ -631,7 +631,7 @@ const Lenovothinkpad = () => {
 
 
 
-                 </footer> 
+             </footer> 
         </div>
     );
 }
